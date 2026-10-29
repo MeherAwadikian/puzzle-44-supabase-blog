@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Forge Blog — Admin</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <h1>Blog Admin</h1>
+      <a class="admin-link" href="index.html">← View blog</a>
+    </header>
+
+    <section id="gate">
+      <p class="sub">Enter the admin key to manage posts. Writes go through key-gated Supabase RPCs — the browser never holds a write-capable database key.</p>
+      <div class="row">
+        <input id="key" type="password" placeholder="Admin key" />
+        <button id="unlock">Unlock</button>
+      </div>
+      <p id="gate-msg" class="meta"></p>
+    </section>
+
+    <section id="panel" hidden>
+      <h2>New / edit post</h2>
+      <form id="form" class="form">
+        <input type="hidden" id="editing-id" />
+        <label>Slug</label><input id="f-slug" required placeholder="my-post-slug" />
+        <label>Title</label><input id="f-title" required />
+        <label>Excerpt</label><input id="f-excerpt" />
+        <label>Body (blank line = paragraph break)</label><textarea id="f-body" rows="6"></textarea>
+        <label>Status</label>
+        <select id="f-status"><option value="draft">draft</option><option value="published">published</option></select>
+        <div class="row">
+          <button type="submit">Save</button>
+          <button type="button" id="reset" class="ghost">Clear</button>
+        </div>
+      </form>
+      <p id="save-msg" class="meta"></p>
+
+      <h2>All posts</h2>
+      <div id="admin-list" class="admin-list"></div>
+    </section>
+  </div>
+  <script type="module" src="admin.js"></script>
+</body>
+</html>

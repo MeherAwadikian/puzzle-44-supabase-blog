@@ -1,0 +1,35 @@
+:root{--bg:#0e0e16;--panel:#171722;--panel2:#1f1f2e;--text:#ecebf7;--muted:#9a95b6;--border:#2a2a3c;--accent:#6b4fd8;--danger:#e0564f}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+.wrap{max-width:720px;margin:3rem auto;padding:0 1.5rem}
+.top{display:flex;align-items:center;justify-content:space-between}
+h1{font-size:1.9rem;letter-spacing:-.02em}
+h2{font-size:1.15rem;margin:2rem 0 1rem}
+.sub{color:var(--muted);margin:.25rem 0 2rem}
+.muted{color:var(--muted)}.meta{color:var(--muted);font-size:.82rem}
+.admin-link{color:var(--accent);text-decoration:none;font-size:.9rem}
+
+.posts{display:flex;flex-direction:column;gap:1rem}
+.post-card{display:block;text-decoration:none;color:var(--text);background:var(--panel);
+  border:1px solid var(--border);border-radius:12px;padding:1.1rem 1.25rem}
+.post-card:hover{border-color:var(--accent)}
+.post-card h3{font-size:1.1rem;margin-bottom:.3rem}
+.post-card p{color:var(--muted);font-size:.92rem;margin-bottom:.5rem}
+
+.single .back{color:var(--accent);text-decoration:none;font-size:.9rem;display:inline-block;margin-bottom:1rem}
+.single h2{font-size:1.7rem;margin:.5rem 0 .25rem}
+.single .body p{margin:1rem 0}
+
+/* admin */
+.row{display:flex;gap:.6rem;align-items:center;margin:.5rem 0}
+input,textarea,select{width:100%;padding:.55rem .7rem;background:var(--panel);border:1px solid var(--border);
+  border-radius:8px;color:var(--text);font:inherit}
+.form label{display:block;font-size:.8rem;color:var(--muted);margin:.8rem 0 .25rem}
+button{background:var(--accent);color:#fff;border:none;padding:.55rem 1.1rem;border-radius:8px;
+  font-weight:600;cursor:pointer;font:inherit;white-space:nowrap}
+button.ghost{background:transparent;border:1px solid var(--border);color:var(--text)}
+button.danger{color:var(--danger);border-color:var(--danger)}
+.admin-list{display:flex;flex-direction:column;gap:.5rem}
+.admin-row{display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:.7rem 1rem}
+.admin-row .ghost{padding:.35rem .7rem;font-size:.85rem;margin-left:.4rem}

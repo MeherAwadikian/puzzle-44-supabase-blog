@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Forge Studio — Blog</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <h1>The Forge Blog</h1>
+      <a class="admin-link" href="admin.html">Admin →</a>
+    </header>
+    <p class="sub">Posts are served live from Supabase — publishing a new one needs no redeploy.</p>
+    <div id="list" class="posts"><p class="muted">Loading…</p></div>
+    <article id="single" class="single" hidden>
+      <a href="#" id="back" class="back">← All posts</a>
+      <h2 id="s-title"></h2>
+      <p id="s-meta" class="meta"></p>
+      <div id="s-body" class="body"></div>
+    </article>
+  </div>
+  <script type="module" src="blog.js"></script>
+</body>
+</html>
